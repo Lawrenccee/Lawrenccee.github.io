@@ -2,12 +2,13 @@ import * as TwitchApi from './twitch_api_util';
 import * as Graph from './graph';
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Initialize
   let results = TwitchApi.requestData({
     clientId: 'xs37hj3ec9i8585sig0axgc7u60t74',
     authToken: '55e4vzxtb1gy43imdu9n3t9nwlir01',
     graph1: Graph.makeGamePieChart,
     graph2: Graph.makeViewerBubbleGraph,
-    numResults: 100 // put zero it breaks ahh
+    numResults: 100
   });
 
   let queryForm = document.getElementById("query-form");
@@ -50,9 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const graph1Div = document.getElementById("graph1");
     const graph2Div = document.getElementById("graph2");
 
-    console.log(graph1Div.firstChild);
-    console.log(graph2Div.firstChild);
-
     while (graph1Div.firstChild) {
       graph1Div.removeChild(graph1Div.firstChild);
     }
@@ -66,7 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
       authToken: '55e4vzxtb1gy43imdu9n3t9nwlir01',
       graph1: graph1,
       graph2: graph2,
-      numResults: data["numResults"] // put zero it breaks ahh
+      gameId: data["gameId"],
+      numResults: data["numResults"], // put zero it breaks ahh
     });
   });
 });
