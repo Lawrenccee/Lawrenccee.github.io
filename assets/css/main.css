@@ -1897,6 +1897,20 @@
 				font-size: 0.9em;
 			}
 
+			#work .box p {
+				text-align: left;
+			}
+
+			#work .box img {
+				height: 40%;
+				width: 40%;
+				margin: 0 auto;
+			}
+
+			#work .image.featured {
+				padding-top: 20px;				
+			}
+
 		/* Copyright */
 
 			#copyright {
