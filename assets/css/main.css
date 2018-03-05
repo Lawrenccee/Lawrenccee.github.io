@@ -1432,8 +1432,8 @@
 				-ms-transition: top .2s ease-in-out;
 				transition: top .2s ease-in-out;
 				display: block;
-				width: 48px;
-				height: 48px;
+				width: 75px;
+				height: 75px;
 				border-radius: 6px;
 				top: 0;
 				position: relative;
@@ -1453,18 +1453,22 @@
 					box-shadow: inset 0px 0px 0px 1px #282828, inset 0px 2px 1px 0px rgba(255, 255, 255, 0.1);
 					color: #2E2E2E !important;
 					display: block;
-					font-size: 26px;
-					height: 48px;
-					line-height: 48px;
+					font-size: 50px;
+					height: 75px;
+					line-height: 75px;
 					text-align: center;
 					outline: 0;
 					overflow: hidden;
 					text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.1);
-					width: 48px;
+					width: 75px;
 				}
 
 				ul.social li a.fa-envelope-o {
 					background-color: #ffffff;
+				}
+
+				ul.social li a.fa-angellist {
+					background-color: rgb(243, 255, 74);
 				}
 
 				ul.social li a.fa-twitter {
@@ -1492,7 +1496,7 @@
 				}
 
 				ul.social li a.fa-github {
-					background-color: #FAFAFA;
+					background-color: rgb(131, 81, 172);
 				}
 
 				ul.social li a.fa-rss {
