@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   let queryForm = document.getElementById("query-form");
-  queryForm.addEventListener("submit", (e) => {
+
+  let query = (e) => {
     e.preventDefault();
     let data = {};
 
@@ -67,5 +68,31 @@ document.addEventListener("DOMContentLoaded", () => {
       gameId: data["gameId"],
       numResults: data["numResults"], // put zero it breaks ahh
     });
-  });
+  };
+
+  let graph1Type = document.getElementById("graph1-type");  
+  let graph2Type = document.getElementById("graph2-type");  
+  let gameOptions = document.getElementById("game-options");  
+  graph1Type.addEventListener("change", query);
+  graph2Type.addEventListener("change", query);
+  gameOptions.addEventListener("change", query);
+  queryForm.addEventListener("submit", query);
+
+  // function query() {
+  //   setTimeout(() => {
+  //     let data = {};
+
+  //     let formData = new FormData(queryForm);
+  //     for (let [key, value] of formData.entries()) {
+  //       data[key] = value;
+  //     }
+
+  //     console.log(data);
+  //     queryForm.querySelector('input[type="submit"]').click();
+  //     query();
+  //   }, 3000);
+  // }
+
+  // query();
 });
+

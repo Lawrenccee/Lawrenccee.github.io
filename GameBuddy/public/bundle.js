@@ -9478,7 +9478,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   var queryForm = document.getElementById("query-form");
-  queryForm.addEventListener("submit", function (e) {
+
+  var query = function query(e) {
     e.preventDefault();
     var data = {};
 
@@ -9559,7 +9560,32 @@ document.addEventListener("DOMContentLoaded", function () {
       gameId: data["gameId"],
       numResults: data["numResults"] // put zero it breaks ahh
     });
-  });
+  };
+
+  var graph1Type = document.getElementById("graph1-type");
+  var graph2Type = document.getElementById("graph2-type");
+  var gameOptions = document.getElementById("game-options");
+  graph1Type.addEventListener("change", query);
+  graph2Type.addEventListener("change", query);
+  gameOptions.addEventListener("change", query);
+  queryForm.addEventListener("submit", query);
+
+  // function query() {
+  //   setTimeout(() => {
+  //     let data = {};
+
+  //     let formData = new FormData(queryForm);
+  //     for (let [key, value] of formData.entries()) {
+  //       data[key] = value;
+  //     }
+
+  //     console.log(data);
+  //     queryForm.querySelector('input[type="submit"]').click();
+  //     query();
+  //   }, 3000);
+  // }
+
+  // query();
 });
 
 /***/ }),
