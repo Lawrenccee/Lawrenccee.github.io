@@ -172,6 +172,12 @@
 		box-sizing: border-box;
 	}
 
+	.center {
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+	}
+
 	.row > * {
 		float: left;
 		-moz-box-sizing: border-box;
@@ -1611,6 +1617,42 @@
 		.icon-ruby-on-rails:before, .icon-ruby:before, .icon-postgres:before, .icon-jquery:before {
 			font-size: 88px;
 			padding-top: 27px;
+		}
+
+		.icon.featured.fa-react {
+			color: #00d8ff;
+		}
+
+		.icon.featured.fa-angular {
+			color: #b52e31;
+		}
+
+		.icon.featured.fa-js-square	{
+			color: #f7df1e
+		}
+
+		.icon.featured.fa-css3 {
+			color: #1E74B5;
+		}
+
+		.icon.featured.fa-html5 {
+			color: #e34f26;
+		}
+
+		.icon-ruby-on-rails {
+			color: #cc0000;
+		}
+
+		.icon-ruby {
+			color: #cc342d;
+		}
+
+		.icon-postgres {
+			color: #33688D;
+		}
+
+		.icon-jquery {
+			color: #0769ad;
 		}
 
 /* Wrappers */
